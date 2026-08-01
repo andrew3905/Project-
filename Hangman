@@ -1,0 +1,87 @@
+import random
+words = ['geometry', 'salary', 'education', 'truthful', 'flower', 'values', 'bring', 'creativity', 'game']
+random_words = random.choice (words)
+dash = []
+chance = 6
+for letter in random_words:
+    dash.append ('_')
+while True:
+    print("The word: ", dash)
+    let = input("Enter a letter: ")
+    if len (let) != 1:
+        print("Please enter a single letter")
+        continue
+    if let in random_words:
+        for position in range(0, len(random_words)):
+            if random_words[position] == let:
+                dash [position] = let
+        if '_' not in dash:
+            print("Congratulations! You guessed the word: ", random_words)
+            break
+    else:
+        chance -= 1
+        if chance == 6:
+            print("=========")
+            print("|       |")
+            print("|")
+            print("|")
+            print("|")
+            print("|")
+            print("|")
+            print("======")
+        elif chance == 5:
+            print("=========")
+            print("|       |")
+            print("|       O")
+            print("|")
+            print("|")
+            print("|")
+            print("|")
+            print("======")
+        elif chance == 4:
+            print("=========")
+            print("|       |")
+            print("|       O")
+            print("|       |")
+            print("|       |")
+            print("|")
+            print("|")
+            print("======")
+        elif chance == 3:
+            print("=========")
+            print("|       |")
+            print("|       O")
+            print("|      /|")
+            print("|       |")
+            print("|")
+            print("|")
+            print("======")
+        elif chance == 2:
+            print("=========")
+            print("|       |")
+            print("|       O")
+            print("|      /|\\")
+            print("|       |")
+            print("|")
+            print("|")
+            print("======")
+        elif chance == 1:
+            print("=========")
+            print("|       |")
+            print("|       O")
+            print("|      /|\\")
+            print("|       |")
+            print("|      /")
+            print("|")
+            print("======")
+        elif chance == 0:
+            print("=========")
+            print("|       |")
+            print("|       O")
+            print("|      /|\\")
+            print("|       |")
+            print("|      / \\")
+            print("|")
+            print("======")
+            print('Sorry, you lost the game! The word was: ', random_words)
+            break
