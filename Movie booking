@@ -1,0 +1,18 @@
+import random
+movies = ["Minions & Monsters", "The Odyssey", "Zootopia","Zootopia 2","Toy Story 5", "Backrooms"]
+tickets = [50, 50, 50, 50, 50, 50]
+costs = [70, 70, 70, 70, 70, 70]
+print("Option 1: Book movie tickets")
+print("Option 2: Cancel tickets")
+print("Option 3: Check revenue")
+print("Option 4: Display statistics")
+print("Option 5: View popular movies")
+print("Option 6: Exit")
+
+option = int(input("Enter your option: "))
+while option != 6:
+    if option < 1 or option > 6:
+        print("Invalid option")
+        option = int(input("Enter your option: "))
+        continue
+    if option == 1 
